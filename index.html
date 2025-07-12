@@ -269,20 +269,29 @@
 
   .kit-slider {
     display: flex;
-    overflow-x: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
-    gap: 20px;
-    padding: 10px 0;
+    gap: 30px;
+    padding: 40px 10px;
+    margin: 0 40px;
   }
 
   .kit-card {
-    min-width: 300px;
+    width: 300px;
+    flex-shrink: 0;
     background-color: #1e1e1e;
     border: 1px solid #444;
-    border-radius: 10px;
-    padding: 16px;
+    border-radius: 12px;
+    padding: 18px;
     box-shadow: 0 0 10px #8b1c1c44;
-    flex-shrink: 0;
+    opacity: 0.4;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: scale(0.95);
+  }
+
+  .kit-card.active {
+    opacity: 1;
+    transform: scale(1);
   }
 
   .kit-card h3 {
@@ -329,18 +338,23 @@
     color: white;
     border: none;
     padding: 10px;
-    font-size: 18px;
+    font-size: 22px;
     cursor: pointer;
     z-index: 10;
+    border-radius: 6px;
   }
 
   .arrow-left { left: 0; }
   .arrow-right { right: 0; }
+
+  @media (max-width: 900px) {
+    .kit-card { width: 250px; }
+  }
 </style>
 
 <div class="catalog-container">
-  <button class="arrow-btn arrow-left" onclick="document.querySelector('.kit-slider').scrollBy({left: -320, behavior: 'smooth'})">&#8592;</button>
-  <button class="arrow-btn arrow-right" onclick="document.querySelector('.kit-slider').scrollBy({left: 320, behavior: 'smooth'})">&#8594;</button>
+  <button class="arrow-btn arrow-left" onclick="scrollSlider(-1)">&#8592;</button>
+  <button class="arrow-btn arrow-right" onclick="scrollSlider(1)">&#8594;</button>
 
   <div class="kit-slider">
     
@@ -417,6 +431,34 @@
 
   </div>
 </div>
+
+<script>
+  const slider = document.getElementById("kitSlider");
+  const cards = document.querySelectorAll(".kit-card");
+
+  function updateCards() {
+    const scrollLeft = slider.scrollLeft;
+    const cardWidth = cards[0].offsetWidth + 30; // width + gap
+    const index = Math.round(scrollLeft / cardWidth);
+
+    cards.forEach((card, i) => {
+      card.classList.toggle("active", i === index);
+    });
+  }
+
+  function scrollSlider(direction) {
+    const cardWidth = cards[0].offsetWidth + 30; // width + gap
+    slider.scrollBy({ left: cardWidth * direction, behavior: 'smooth' });
+  }
+
+  slider.addEventListener('scroll', () => {
+    updateCards();
+  });
+
+  // Inicial
+  updateCards();
+</script>
+
   
 <section>
   <h2>🛒 Tienda Oficial de Terraz</h2>
