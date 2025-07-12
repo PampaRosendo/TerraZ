@@ -1,470 +1,472 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TERRAZ - Project Zomboid</title>
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TERRAZ - Project Zomboid</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #0e0e0e;
+        color: #f1f1f1;
+      }
+      header {
+        background: #1a1a1a;
+        padding: 30px;
+        text-align: center;
+        border-bottom: 2px solid #444;
+      }
+      h1 {
+        font-size: 2.8em;
+        color: #ff4747;
+        margin: 0;
+      }
+      p.slogan {
+        font-size: 1.2em;
+        color: #ccc;
+      }
+      section {
+        padding: 40px 20px;
+        max-width: 1000px;
+        margin: auto;
+      }
+      .button {
+        background: #ff4747;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: background 0.3s;
+        display: inline-block;
+        margin-top: 20px;
+      }
+      .button:hover {
+        background: #e03e3e;
+      }
+      .info-box {
+        background: #1f1f1f;
+        border-left: 5px solid #ff4747;
+        padding: 20px;
+        margin-top: 30px;
+        line-height: 1.6;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #111;
+        color: #888;
+        font-size: 0.9em;
+      }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 40px;
+      }
+      .gallery img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: auto;
+        border: 2px solid #333;
+        object-fit: contain;
+        display: block;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+      }
+      .feature {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 4px solid #ff4747;
+      }
+      hr {
+        border: none;
+        height: 2px;
+        background-color: #333;
+        margin: 60px 0;
+      }
+    </style>
+  </head>
+  <body>
+
+  <header>
+    <h1>TERRAZ</h1>
+    <p class="slogan">Volvimos. Más troll que nunca.</p>
+  </header>
+
+  <section>
+    <h2>🔥 Bienvenidos al resurgimiento</h2>
+    <p>Después de tanto tiempo, Terraz vuelve más fuerte que nunca. Si pensaban que nos habíamos ido... se equivocaron. Esta vez el caos está garantizado.</p>
+
+    <div class="info-box">
+      <ul>
+        <li>🚗 <strong>Vehículos y mecánica realista</strong>: Más de 40 vehículos nuevos 🚙🚛 (civiles, militares y deportivos), reparación y reciclaje detallado 🔧, upgrades universales y helicópteros funcionales 🚁.</li>
+        <li>🧟 <strong>Zombies rework total</strong>: Zombies tipo CDDA 😱, esporas contagiosas ☣️, mutaciones, nuevos comportamientos y dificultad creciente con el tiempo.</li>
+        <li>🔫 <strong>Armas, combate y munición</strong>: Arsenal Gunfighter con cientos de armas 🪖, animaciones realistas 🎯, recargas avanzadas 🔄, sonido mejorado 🔊 y reparaciones universales.</li>
+        <li>🛠️ <strong>Construcción y decoración</strong>: Escaleras reales 🪜, decoración interactiva 🪑, fontanería 💧, upgrades de mochilas 🎒 y crafteo detallado.</li>
+        <li>🍽️ <strong>Supervivencia extrema</strong>: Loot reducido 📦, sistema de economía automática 💵, comercio, consumo de drogas 💊, hambre y cocina realista 🍲.</li>
+        <li>🧰 <strong>Mejoras de calidad de vida</strong>: Interfaz optimizada 🖥️, reducción de lag 🧹, lectura en movimiento 📖, mochilas únicas, alertas, minimapas y seguimiento de muertes ☠️.</li>
+        <li>🧑‍🤝‍🧑 <strong>Rol, lifestyle y facciones</strong>: Facciones con casas seguras 🏠, lifestyle mods (cosplay 🧝, NieR 🤖, The Last of Us 🧒🧟), eventos roleados 🎭 y skins exclusivas.</li>
+        <li>🏋️ <strong>Fitness, emociones y psicología</strong>: Entrenamiento realista 💪, emociones dinámicas 🧠, rasgos únicos 🧬, estados mentales extremos como esquizofrenia 🌀.</li>
+        <li>🎵 <strong>Música y sonido ambiente</strong>: Bandas como Metallica, Rammstein y más 🎸, radios funcionales 📻, alertas personalizadas 🚨 y ambientaciones de terror.</li>
+      </ul>
+    </div>
+
+    <a href="https://discord.gg/MGan4TUp" target="_blank" class="button">Entrá al Discord</a>
+  </section>
+
+  <hr>
+
+  <div style="max-width: 500px; margin: 20px auto; font-family: 'Segoe UI', sans-serif;">
+    <table style="width: 100%; border-collapse: collapse; background-color: #1c1c1c; color: #f1f1f1; box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 8px; overflow: hidden;">
+      <thead>
+        <tr style="background-color: #8a1f1f;">
+          <th style="padding: 12px; text-align: left;">Horario de Reset (GMT-5)</th>
+          <th style="padding: 12px; text-align: left;">Equivalente en GMT-3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background-color: #2b2b2b;">
+          <td style="padding: 10px;">00:00 </td>
+          <td style="padding: 10px;">02:00 </td>
+        </tr>
+        <tr style="background-color: #1f1f1f;">
+          <td style="padding: 10px;">08:00 </td>
+          <td style="padding: 10px;">10:00</td>
+        </tr>
+        <tr style="background-color: #2b2b2b;">
+          <td style="padding: 10px;">16:00 </td>
+          <td style="padding: 10px;">18:00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr>
+
+  <section>
+    <h2>🧰 ¿Qué te espera en el servidor?</h2>
+    <div class="features">
+      <div class="feature">
+        🔧 Comandos únicos y plugins especiales
+      </div>
+      <div class="feature">
+        🏠 Facciones con base, economía y conflictos
+      </div>
+      <div class="feature">
+        📅 Eventos especiales semanales
+      </div>
+      <div class="feature">
+        🎯 Objetivos dinámicos: guerra, supervivencia y exploración
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>🖼️ Galería del caos</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/q5d9owh.jpeg" alt="Zomboid Screenshot 1">
+      <img src="https://i.imgur.com/xGH2qA9.jpeg" alt="Zomboid Screenshot 2">
+      <img src="https://i.imgur.com/goj85ib.png" alt="Zomboid Screenshot 3">
+      <img src="https://i.imgur.com/H99vz2G.png" alt="Zomboid Screenshot 4">
+      <img src="https://i.imgur.com/h9Lx2Mk.jpeg" alt="Zomboid Screenshot 5">
+      
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>📢 Devlog 1 // <em>11-7-2025</em></h2>
+    <ul>
+      <li>✔️ Servidor reiniciado con mapas limpios</li>
+      <li>✔️ Nuevas facciones activas</li>
+      <li>✔️ Sistema de eventos por temporada</li>
+      <li>✔️ Comandos personalizados y roles dinámicos</li>
+    </ul>
+  </section>
+
+  <hr>
+
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0e0e0e;
-      color: #f1f1f1;
-    }
-    header {
-      background: #1a1a1a;
-      padding: 30px;
-      text-align: center;
-      border-bottom: 2px solid #444;
-    }
-    h1 {
-      font-size: 2.8em;
-      color: #ff4747;
-      margin: 0;
-    }
-    p.slogan {
-      font-size: 1.2em;
-      color: #ccc;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .button {
-      background: #ff4747;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    .button:hover {
-      background: #e03e3e;
-    }
-    .info-box {
-      background: #1f1f1f;
-      border-left: 5px solid #ff4747;
-      padding: 20px;
-      margin-top: 30px;
-      line-height: 1.6;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #888;
-      font-size: 0.9em;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 40px;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      border-radius: auto;
-      border: 2px solid #333;
-      object-fit: contain;
-      display: block;
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
+    @keyframes pulseSlow {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.05; }
+      50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.1; }
     }
-    .feature {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      border-left: 4px solid #ff4747;
+
+    .tienda-cartel {
+      animation: fadeIn 1.2s ease-out forwards;
     }
-    hr {
-      border: none;
-      height: 2px;
-      background-color: #333;
-      margin: 60px 0;
+
+    .tienda-bg-icon {
+      animation: pulseSlow 5s ease-in-out infinite;
+    }
+
+    .tienda-cartel a:hover {
+      color: #ff6f6f !important;
     }
   </style>
-</head>
-<body>
 
-<header>
-  <h1>TERRAZ</h1>
-  <p class="slogan">Volvimos. Más troll que nunca.</p>
-</header>
+  <section style="padding: 60px 20px; max-width: 800px; margin: auto; text-align: center; position: relative;">
+    <!-- Fondo decorativo -->
+    <div class="tienda-bg-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.05; font-size: 120px; pointer-events: none; color: #ff4747;">⚙️</div>
+
+    <!-- Cartel principal -->
+    <div class="tienda-cartel" style="
+      background: linear-gradient(145deg, #1a1a1a, #111);
+      border-left: 5px solid #ff4747;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+    ">
+      <h2 style="color: #ff4747; font-size: 2em; margin-bottom: 10px;">🛠️ Tienda en mantenimiento</h2>
+      <p style="color: #ccc; font-size: 1.1em; line-height: 1.5;">
+        Estamos trabajando para activar la tienda de Terraz. Muy pronto vas a poder comprar kits, rangos y contenido exclusivo directamente desde la web.
+      </p>
+      <p style="color: #aaa; font-size: 0.95em; margin-top: 20px;">
+        💳 Los pagos serán únicamente en <strong style="color:#f7f7f7;">Pesos Argentinos (ARS)</strong> mediante <strong style="color:#f7f7f7;">Mercado Pago</strong>.<br>
+        Para usar <strong style="color:#f7f7f7;">PayPal</strong>, consultanos directamente en 
+        <a href="https://discord.gg/MGan4TUp" target="_blank" style="color: #ff4747; text-decoration: none; font-weight: bold;">
+          Discord
+        </a>.
+      </p>
+    </div>
+  </section>
+
+  <style>
+    body {
+      background-color: #121212;
+      font-family: 'Segoe UI', sans-serif;
+      color: #ddd;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .catalog-container {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .kit-slider {
+      display: flex;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .kit-card {
+      min-width: 300px;
+      background-color: #1e1e1e;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 0 10px #8b1c1c44;
+      flex-shrink: 0;
+    }
+
+    .kit-card h3 {
+      margin-top: 0;
+      color: #ff5555;
+    }
+
+    .kit-card p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    .kit-card .price {
+      margin-top: 12px;
+      font-weight: bold;
+      color: #ccc;
+    }
+
+    .kit-card .btn-group {
+      margin-top: 10px;
+    }
+
+    .pay-btn {
+      display: inline-block;
+      padding: 8px 12px;
+      margin-right: 6px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      font-size: 13px;
+    }
+
+    .mp-btn { background-color: #00b1ff; }
+    .pp-btn { background-color: #0070ba; }
+    .mp-btn:hover { background-color: #0099dd; }
+    .pp-btn:hover { background-color: #005b9f; }
+
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #8b1c1c;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .arrow-left { left: 0; }
+    .arrow-right { right: 0; }
+  </style>
 
 <section>
-  <h2>🔥 Bienvenidos al resurgimiento</h2>
-  <p>Después de tanto tiempo, Terraz vuelve más fuerte que nunca. Si pensaban que nos habíamos ido... se equivocaron. Esta vez el caos está garantizado.</p>
-
-  <div class="info-box">
-    <ul>
-      <li>🚗 <strong>Vehículos y mecánica realista</strong>: Más de 40 vehículos nuevos 🚙🚛 (civiles, militares y deportivos), reparación y reciclaje detallado 🔧, upgrades universales y helicópteros funcionales 🚁.</li>
-      <li>🧟 <strong>Zombies rework total</strong>: Zombies tipo CDDA 😱, esporas contagiosas ☣️, mutaciones, nuevos comportamientos y dificultad creciente con el tiempo.</li>
-      <li>🔫 <strong>Armas, combate y munición</strong>: Arsenal Gunfighter con cientos de armas 🪖, animaciones realistas 🎯, recargas avanzadas 🔄, sonido mejorado 🔊 y reparaciones universales.</li>
-      <li>🛠️ <strong>Construcción y decoración</strong>: Escaleras reales 🪜, decoración interactiva 🪑, fontanería 💧, upgrades de mochilas 🎒 y crafteo detallado.</li>
-      <li>🍽️ <strong>Supervivencia extrema</strong>: Loot reducido 📦, sistema de economía automática 💵, comercio, consumo de drogas 💊, hambre y cocina realista 🍲.</li>
-      <li>🧰 <strong>Mejoras de calidad de vida</strong>: Interfaz optimizada 🖥️, reducción de lag 🧹, lectura en movimiento 📖, mochilas únicas, alertas, minimapas y seguimiento de muertes ☠️.</li>
-      <li>🧑‍🤝‍🧑 <strong>Rol, lifestyle y facciones</strong>: Facciones con casas seguras 🏠, lifestyle mods (cosplay 🧝, NieR 🤖, The Last of Us 🧒🧟), eventos roleados 🎭 y skins exclusivas.</li>
-      <li>🏋️ <strong>Fitness, emociones y psicología</strong>: Entrenamiento realista 💪, emociones dinámicas 🧠, rasgos únicos 🧬, estados mentales extremos como esquizofrenia 🌀.</li>
-      <li>🎵 <strong>Música y sonido ambiente</strong>: Bandas como Metallica, Rammstein y más 🎸, radios funcionales 📻, alertas personalizadas 🚨 y ambientaciones de terror.</li>
-    </ul>
-  </div>
-
-  <a href="https://discord.gg/MGan4TUp" target="_blank" class="button">Entrá al Discord</a>
-</section>
-
-<hr>
-
-<div style="max-width: 500px; margin: 20px auto; font-family: 'Segoe UI', sans-serif;">
-  <table style="width: 100%; border-collapse: collapse; background-color: #1c1c1c; color: #f1f1f1; box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 8px; overflow: hidden;">
-    <thead>
-      <tr style="background-color: #8a1f1f;">
-        <th style="padding: 12px; text-align: left;">Horario de Reset (GMT-5)</th>
-        <th style="padding: 12px; text-align: left;">Equivalente en GMT-3</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="background-color: #2b2b2b;">
-        <td style="padding: 10px;">00:00 </td>
-        <td style="padding: 10px;">02:00 </td>
-      </tr>
-      <tr style="background-color: #1f1f1f;">
-        <td style="padding: 10px;">08:00 </td>
-        <td style="padding: 10px;">10:00</td>
-      </tr>
-      <tr style="background-color: #2b2b2b;">
-        <td style="padding: 10px;">16:00 </td>
-        <td style="padding: 10px;">18:00</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<hr>
-
-<section>
-  <h2>🧰 ¿Qué te espera en el servidor?</h2>
-  <div class="features">
-    <div class="feature">
-      🔧 Comandos únicos y plugins especiales
-    </div>
-    <div class="feature">
-      🏠 Facciones con base, economía y conflictos
-    </div>
-    <div class="feature">
-      📅 Eventos especiales semanales
-    </div>
-    <div class="feature">
-      🎯 Objetivos dinámicos: guerra, supervivencia y exploración
-    </div>
-  </div>
-</section>
-
-<hr>
-
-<section>
-  <h2>🖼️ Galería del caos</h2>
-  <div class="gallery">
-    <img src="https://i.imgur.com/q5d9owh.jpeg" alt="Zomboid Screenshot 1">
-    <img src="https://i.imgur.com/xGH2qA9.jpeg" alt="Zomboid Screenshot 2">
-    <img src="https://i.imgur.com/goj85ib.png" alt="Zomboid Screenshot 3">
-    <img src="https://i.imgur.com/H99vz2G.png" alt="Zomboid Screenshot 4">
-    <img src="https://i.imgur.com/h9Lx2Mk.jpeg" alt="Zomboid Screenshot 5">
-    
-  </div>
-</section>
-
-<hr>
-
-<section>
-  <h2>📢 Devlog 1 // <em>11-7-2025</em></h2>
-  <ul>
-    <li>✔️ Servidor reiniciado con mapas limpios</li>
-    <li>✔️ Nuevas facciones activas</li>
-    <li>✔️ Sistema de eventos por temporada</li>
-    <li>✔️ Comandos personalizados y roles dinámicos</li>
-  </ul>
-</section>
-
-<hr>
-
-<style>
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes pulseSlow {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.05; }
-    50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.1; }
-  }
-
-  .tienda-cartel {
-    animation: fadeIn 1.2s ease-out forwards;
-  }
-
-  .tienda-bg-icon {
-    animation: pulseSlow 5s ease-in-out infinite;
-  }
-
-  .tienda-cartel a:hover {
-    color: #ff6f6f !important;
-  }
-</style>
-
-<section style="padding: 60px 20px; max-width: 800px; margin: auto; text-align: center; position: relative;">
-  <!-- Fondo decorativo -->
-  <div class="tienda-bg-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.05; font-size: 120px; pointer-events: none; color: #ff4747;">⚙️</div>
-
-  <!-- Cartel principal -->
-  <div class="tienda-cartel" style="
-    background: linear-gradient(145deg, #1a1a1a, #111);
-    border-left: 5px solid #ff4747;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.6);
-    position: relative;
-    z-index: 1;
-    opacity: 0;
-  ">
-    <h2 style="color: #ff4747; font-size: 2em; margin-bottom: 10px;">🛠️ Tienda en mantenimiento</h2>
-    <p style="color: #ccc; font-size: 1.1em; line-height: 1.5;">
-      Estamos trabajando para activar la tienda de Terraz. Muy pronto vas a poder comprar kits, rangos y contenido exclusivo directamente desde la web.
-    </p>
-    <p style="color: #aaa; font-size: 0.95em; margin-top: 20px;">
-      💳 Los pagos serán únicamente en <strong style="color:#f7f7f7;">Pesos Argentinos (ARS)</strong> mediante <strong style="color:#f7f7f7;">Mercado Pago</strong>.<br>
-      Para usar <strong style="color:#f7f7f7;">PayPal</strong>, consultanos directamente en 
-      <a href="https://discord.gg/MGan4TUp" target="_blank" style="color: #ff4747; text-decoration: none; font-weight: bold;">
-        Discord
-      </a>.
-    </p>
-  </div>
-</section>
-
-<style>
-  body {
-    background-color: #121212;
-    font-family: 'Segoe UI', sans-serif;
-    color: #ddd;
-    margin: 0;
-    padding: 20px;
-  }
-
-  .catalog-container {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  .kit-slider {
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 10px 0;
-  }
-
-  .kit-card {
-    min-width: 300px;
-    background-color: #1e1e1e;
-    border: 1px solid #444;
-    border-radius: 10px;
-    padding: 16px;
-    box-shadow: 0 0 10px #8b1c1c44;
-    flex-shrink: 0;
-  }
-
-  .kit-card h3 {
-    margin-top: 0;
-    color: #ff5555;
-  }
-
-  .kit-card p {
-    margin: 8px 0;
-    font-size: 14px;
-  }
-
-  .kit-card .price {
-    margin-top: 12px;
-    font-weight: bold;
-    color: #ccc;
-  }
-
-  .kit-card .btn-group {
-    margin-top: 10px;
-  }
-
-  .pay-btn {
-    display: inline-block;
-    padding: 8px 12px;
-    margin-right: 6px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    font-size: 13px;
-  }
-
-  .mp-btn { background-color: #00b1ff; }
-  .pp-btn { background-color: #0070ba; }
-  .mp-btn:hover { background-color: #0099dd; }
-  .pp-btn:hover { background-color: #005b9f; }
-
-  .arrow-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #8b1c1c;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    z-index: 10;
-  }
-
-  .arrow-left { left: 0; }
-  .arrow-right { right: 0; }
-</style>
-
-<div class="catalog-container">
-  <button class="arrow-btn arrow-left" onclick="document.querySelector('.kit-slider').scrollBy({left: -320, behavior: 'smooth'})">&#8592;</button>
-  <button class="arrow-btn arrow-right" onclick="document.querySelector('.kit-slider').scrollBy({left: 320, behavior: 'smooth'})">&#8594;</button>
-
-  <div class="kit-slider">
-    
-    <h2>🛒 Tienda Oficial de Terraz</h2>
+  <h2>🛒 Tienda Oficial de Terraz</h2>
   <p>Apoyá el servidor y obtené kits, rangos o acceso a zonas exclusivas.</p>
-    
-    <div class="kit-card">
-      <h3>🪖 Milico Básico</h3>
-      <p>M16A2 + cuchillo y chaleco liviano.</p>
-      <p class="price">ARS $2.500 / USD 2</p>
-      <div class="btn-group">
-        <a href="https://mpago.li/2Nibj6L" class="pay-btn mp-btn">MercadoPago</a>
-        <a href="#" class="pay-btn pp-btn">PayPal</a>
-      </div>
-    </div>
+</section>
 
-    <div class="kit-card">
-      <h3>🔥 Asalto Urbano</h3>
-      <p>AK-74M + pistola Makarov y mochila táctica.</p>
-      <p class="price">ARS $2.500 / USD 2</p>
-      <div class="btn-group">
-        <a href="https://mpago.li/2Nibj6L" class="pay-btn mp-btn">MercadoPago</a>
-        <a href="#" class="pay-btn pp-btn">PayPal</a>
-      </div>
-    </div>
+  <div class="catalog-container">
+    <button class="arrow-btn arrow-left" onclick="document.querySelector('.kit-slider').scrollBy({left: -320, behavior: 'smooth'})">&#8592;</button>
+    <button class="arrow-btn arrow-right" onclick="document.querySelector('.kit-slider').scrollBy({left: 320, behavior: 'smooth'})">&#8594;</button>
 
-    <div class="kit-card">
-      <h3>🎯 Tirador Designado</h3>
-      <p>DMR + binoculares y munición de largo alcance.</p>
-      <p class="price">ARS $3.000 / USD 2.50</p>
-      <div class="btn-group">
-        <a href="https://mpago.la/2dWYjg4" class="pay-btn mp-btn">MercadoPago</a>
-        <a href="#" class="pay-btn pp-btn">PayPal</a>
-      </div>
-    </div>
-    
-    <div class="kit-card">
-      <h3>🕵️ Silencioso</h3>
-      <p>MP5SD + cuchillo y ropa táctica oscura.</p>
-      <p class="price">ARS $3.000 / USD 2.50</p>
-      <div class="btn-group">
-        <a href="https://mpago.la/2dWYjg4" class="pay-btn mp-btn">MercadoPago</a>
-        <a href="#" class="pay-btn pp-btn">PayPal</a>
-      </div>
-    </div>
-
-    <div class="kit-card">
-      <h3>🔥 Escopeta de Reventón</h3>
-      <p>Remington 870 + machete y munición 12GA</p>
-      <p class="price">ARS $3.000 / USD 2.50</p>
-      <div class="btn-group">
-        <a href="https://mpago.la/2dWYjg4" class="pay-btn mp-btn">MercadoPago</a>
-        <a href="#" class="pay-btn pp-btn">PayPal</a>
-      </div>
-    </div>
-
-    <div class="kit-card">
-      <h3>🚙 4x4 Reconocimiento</h3>
-      <p>Jeep militar + GPS, bidones y herramientas</p>
-      <p class="price">ARS $9.000 / USD 8.00</p>
-      <div class="btn-group">
-        <a href="https://mpago.la/1PXuhbG" class="pay-btn mp-btn">MercadoPago</a>
-        <a href="#" class="pay-btn pp-btn">PayPal</a>
-      </div>
-    </div>
-
-    <div class="kit-card">
-      <h3>🚓 Patrulla Antizombi</h3>
-      <p>Vehículo policial + armas, sirena y radio</p>
-      <p class="price">ARS $7.500 / USD 6.00</p>
-      <div class="btn-group">
-        <a href="https://mpago.la/2dPNGLo" class="pay-btn mp-btn">MercadoPago</a>
-        <a href="#" class="pay-btn pp-btn">PayPal</a>
+    <div class="kit-slider">    
+      
+      <div class="kit-card">
+        <h3>🪖 Milico Básico</h3>
+        <p>M16A2 + cuchillo y chaleco liviano.</p>
+        <p class="price">ARS $2.500 / USD 2</p>
+        <div class="btn-group">
+          <a href="https://mpago.li/2Nibj6L" class="pay-btn mp-btn">MercadoPago</a>
+          <a href="#" class="pay-btn pp-btn">PayPal</a>
+        </div>
       </div>
 
-    </div>
-    <!-- Podés seguir duplicando divs como estos para los demás kits -->
+      <div class="kit-card">
+        <h3>🔥 Asalto Urbano</h3>
+        <p>AK-74M + pistola Makarov y mochila táctica.</p>
+        <p class="price">ARS $2.500 / USD 2</p>
+        <div class="btn-group">
+          <a href="https://mpago.li/2Nibj6L" class="pay-btn mp-btn">MercadoPago</a>
+          <a href="#" class="pay-btn pp-btn">PayPal</a>
+        </div>
+      </div>
 
+      <div class="kit-card">
+        <h3>🎯 Tirador Designado</h3>
+        <p>DMR + binoculares y munición de largo alcance.</p>
+        <p class="price">ARS $3.000 / USD 2.50</p>
+        <div class="btn-group">
+          <a href="https://mpago.la/2dWYjg4" class="pay-btn mp-btn">MercadoPago</a>
+          <a href="#" class="pay-btn pp-btn">PayPal</a>
+        </div>
+      </div>
+      
+      <div class="kit-card">
+        <h3>🕵️ Silencioso</h3>
+        <p>MP5SD + cuchillo y ropa táctica oscura.</p>
+        <p class="price">ARS $3.000 / USD 2.50</p>
+        <div class="btn-group">
+          <a href="https://mpago.la/2dWYjg4" class="pay-btn mp-btn">MercadoPago</a>
+          <a href="#" class="pay-btn pp-btn">PayPal</a>
+        </div>
+      </div>
+
+      <div class="kit-card">
+        <h3>🔥 Escopeta de Reventón</h3>
+        <p>Remington 870 + machete y munición 12GA</p>
+        <p class="price">ARS $3.000 / USD 2.50</p>
+        <div class="btn-group">
+          <a href="https://mpago.la/2dWYjg4" class="pay-btn mp-btn">MercadoPago</a>
+          <a href="#" class="pay-btn pp-btn">PayPal</a>
+        </div>
+      </div>
+
+      <div class="kit-card">
+        <h3>🚙 4x4 Reconocimiento</h3>
+        <p>Jeep militar + GPS, bidones y herramientas</p>
+        <p class="price">ARS $9.000 / USD 8.00</p>
+        <div class="btn-group">
+          <a href="https://mpago.la/1PXuhbG" class="pay-btn mp-btn">MercadoPago</a>
+          <a href="#" class="pay-btn pp-btn">PayPal</a>
+        </div>
+      </div>
+
+      <div class="kit-card">
+        <h3>🚓 Patrulla Antizombi</h3>
+        <p>Vehículo policial + armas, sirena y radio</p>
+        <p class="price">ARS $7.500 / USD 6.00</p>
+        <div class="btn-group">
+          <a href="https://mpago.la/2dPNGLo" class="pay-btn mp-btn">MercadoPago</a>
+          <a href="#" class="pay-btn pp-btn">PayPal</a>
+        </div>
+
+      </div>
+      <!-- Podés seguir duplicando divs como estos para los demás kits -->
+
+    </div>
   </div>
-</div>
-  
-<hr>
+    
+  <hr>
 
-<footer>
-  Proyecto comunitario de fans de Project Zomboid.<br>
-  Terraz © 2025
-</footer>
+  <footer>
+    Proyecto comunitario de fans de Project Zomboid.<br>
+    Terraz © 2025
+  </footer>
 
-<footer style="background-color: #121212; color: #e0e0e0; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
-  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-    <h2 style="color: #b32b2b; margin-bottom: 10px;">🌐 Créditos Terraz Project Zomboid</h2>
-    <p style="color: #999; font-size: 14px; margin-bottom: 30px;">Gracias a todos los que hacen posible esta locura zombie.</p>
+  <footer style="background-color: #121212; color: #e0e0e0; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <h2 style="color: #b32b2b; margin-bottom: 10px;">🌐 Créditos Terraz Project Zomboid</h2>
+      <p style="color: #999; font-size: 14px; margin-bottom: 30px;">Gracias a todos los que hacen posible esta locura zombie.</p>
 
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px;">
 
-      <!-- Admins -->
-      <div style="flex: 1; min-width: 250px;">
-        <h3 style="color: #8a1f1f; margin-bottom: 10px;">🛡️ Admins</h3>
-        <ul style="list-style: none; padding: 0; font-size: 15px;">
-          <li>Pampe</li>
-          <li>MooN</li>
-          <li>Antoni</li>
-          <li>Sr.Panda</li>
-          <li>¡Y los que ya saben!</li>
-        </ul>
+        <!-- Admins -->
+        <div style="flex: 1; min-width: 250px;">
+          <h3 style="color: #8a1f1f; margin-bottom: 10px;">🛡️ Admins</h3>
+          <ul style="list-style: none; padding: 0; font-size: 15px;">
+            <li>Pampe</li>
+            <li>MooN</li>
+            <li>Antoni</li>
+            <li>Sr.Panda</li>
+            <li>¡Y los que ya saben!</li>
+          </ul>
+        </div>
+
+        <!-- Jugadores -->
+        <div style="flex: 1; min-width: 250px;">
+          <h3 style="color: #8a1f1f; margin-bottom: 10px;">🎖️ Jugadores Destacados</h3>
+          <ul style="list-style: none; padding: 0; font-size: 15px;">
+            <li>ElLuis23</li>
+            <li>YizZ</li>
+            <li>Oliuxx</li>
+            <li>A1kcar</li>
+          </ul>
+        </div>
+
       </div>
 
-      <!-- Jugadores -->
-      <div style="flex: 1; min-width: 250px;">
-        <h3 style="color: #8a1f1f; margin-bottom: 10px;">🎖️ Jugadores Destacados</h3>
-        <ul style="list-style: none; padding: 0; font-size: 15px;">
-          <li>ElLuis23</li>
-          <li>YizZ</li>
-          <li>Oliuxx</li>
-          <li>A1kcar</li>
-        </ul>
-      </div>
-
+      <p style="margin-top: 40px; font-size: 12px; color: #666;">© 2025 Terraz Zomboid. Todos los derechos reservados.</p>
     </div>
-
-    <p style="margin-top: 40px; font-size: 12px; color: #666;">© 2025 Terraz Zomboid. Todos los derechos reservados.</p>
-  </div>
-</footer>
+  </footer>
 
 
-</body>
-</html>
+  </body>
+  </html>
