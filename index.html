@@ -199,12 +199,36 @@
 
 <hr>
 
+<style>
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulseSlow {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.05; }
+    50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.1; }
+  }
+
+  .tienda-cartel {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  .tienda-bg-icon {
+    animation: pulseSlow 5s ease-in-out infinite;
+  }
+
+  .tienda-cartel a:hover {
+    color: #ff6f6f !important;
+  }
+</style>
+
 <section style="padding: 60px 20px; max-width: 800px; margin: auto; text-align: center; position: relative;">
   <!-- Fondo decorativo -->
-  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.05; font-size: 120px; pointer-events: none; color: #ff4747;">⚙️</div>
+  <div class="tienda-bg-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.05; font-size: 120px; pointer-events: none; color: #ff4747;">⚙️</div>
 
   <!-- Cartel principal -->
-  <div style="
+  <div class="tienda-cartel" style="
     background: linear-gradient(145deg, #1a1a1a, #111);
     border-left: 5px solid #ff4747;
     padding: 30px;
@@ -212,7 +236,7 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
     position: relative;
     z-index: 1;
-    transition: all 0.3s ease-in-out;
+    opacity: 0;
   ">
     <h2 style="color: #ff4747; font-size: 2em; margin-bottom: 10px;">🛠️ Tienda en mantenimiento</h2>
     <p style="color: #ccc; font-size: 1.1em; line-height: 1.5;">
@@ -221,7 +245,7 @@
     <p style="color: #aaa; font-size: 0.95em; margin-top: 20px;">
       💳 Los pagos serán únicamente en <strong style="color:#f7f7f7;">Pesos Argentinos (ARS)</strong> mediante <strong style="color:#f7f7f7;">Mercado Pago</strong>.<br>
       Para usar <strong style="color:#f7f7f7;">PayPal</strong>, consultanos directamente en 
-      <a href="https://discord.gg/MGan4TUp" target="_blank" style="color: #ff4747; text-decoration: none; font-weight: bold; transition: color 0.3s;">
+      <a href="https://discord.gg/MGan4TUp" target="_blank" style="color: #ff4747; text-decoration: none; font-weight: bold;">
         Discord
       </a>.
     </p>
